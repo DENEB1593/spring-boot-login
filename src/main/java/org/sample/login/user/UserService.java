@@ -1,4 +1,4 @@
-package org.sample.login.domain.user;
+package org.sample.login.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

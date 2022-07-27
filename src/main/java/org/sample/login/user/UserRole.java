@@ -1,4 +1,4 @@
-package org.sample.login.domain.user;
+package org.sample.login.user;
 
 public enum UserRole {
     USER,
