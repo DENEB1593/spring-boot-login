@@ -1,5 +1,5 @@
 package org.sample.login.email;
 
 public interface EmailSender {
-    public String send(String to, String email);
+    public void send(String to, String email);
 }

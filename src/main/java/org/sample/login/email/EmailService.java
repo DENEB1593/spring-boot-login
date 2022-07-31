@@ -19,7 +19,7 @@ public class EmailService implements EmailSender{
 
     @Override
     @Async
-    public String send(String to, String email) {
+    public void send(String to, String email) {
         try {
             MimeMessage mimeMessage = mailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, "utf-8");
@@ -33,5 +33,4 @@ public class EmailService implements EmailSender{
             throw new IllegalStateException("fail to send mail");
         }
     }
-
 }
