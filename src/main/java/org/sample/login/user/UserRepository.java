@@ -10,8 +10,7 @@ import java.io.IOException;
 import java.util.Optional;
 
 @Repository
-// @Transactional(readOnly = true)
-@Transactional(rollbackFor = {IOException.class})
+@Transactional(readOnly = true)
 public interface UserRepository extends JpaRepository<User, Long> {
 
     Optional<User> findByEmail(String email);
