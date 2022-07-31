@@ -3,7 +3,6 @@ package org.sample.login.registration.token;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 import org.sample.login.user.User;
 
 import javax.persistence.*;
@@ -12,8 +11,8 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @NoArgsConstructor
-@ToString
 @Entity
+@Table(name = "confirmation_token")
 public class ConfirmationToken {
 
     @Id
@@ -32,7 +31,7 @@ public class ConfirmationToken {
     private LocalDateTime confirmedAt;
 
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(nullable = false, name = "user_id")
     private User user;
 
     public ConfirmationToken(String token,

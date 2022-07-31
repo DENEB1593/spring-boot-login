@@ -42,8 +42,8 @@ public class UserService implements UserDetailsService {
         }
 
         String encodedPassword = bCryptPasswordEncoder .encode(user.getPassword());
-
         user.setPassword(encodedPassword);
+        userRepository.save(user);
 
         final String token = UUID.randomUUID().toString();
 
@@ -59,5 +59,9 @@ public class UserService implements UserDetailsService {
         // TODO: send Email
 
         return token;
+    }
+
+    public int enableUser(String email) {
+        return userRepository.enableUser(email);
     }
 }
