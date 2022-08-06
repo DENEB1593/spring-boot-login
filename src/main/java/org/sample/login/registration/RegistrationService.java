@@ -4,8 +4,6 @@ import lombok.AllArgsConstructor;
 import org.sample.login.email.EmailService;
 import org.sample.login.registration.token.ConfirmationToken;
 import org.sample.login.registration.token.ConfirmationTokenService;
-import org.sample.login.user.User;
-import org.sample.login.user.UserRole;
 import org.sample.login.user.UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
