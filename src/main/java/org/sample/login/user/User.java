@@ -1,9 +1,6 @@
 package org.sample.login.user;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -31,6 +28,7 @@ public class User implements UserDetails {
     private Boolean locked = Boolean.FALSE;
     private Boolean enabled = Boolean.FALSE;
 
+    @Builder
     public User(String name,
                 String username,
                 String email,

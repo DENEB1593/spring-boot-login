@@ -2,6 +2,7 @@ package org.sample.login.user;
 
 import lombok.RequiredArgsConstructor;
 import org.sample.login.registration.token.ConfirmationToken;
+import org.sample.login.registration.token.ConfirmationTokenPolicy;
 import org.sample.login.registration.token.ConfirmationTokenRepository;
 import org.sample.login.registration.token.ConfirmationTokenService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,20 +46,13 @@ public class UserService implements UserDetailsService {
         user.setPassword(encodedPassword);
         userRepository.save(user);
 
-        final String token = UUID.randomUUID().toString();
-
-        ConfirmationToken confirmationToken = new ConfirmationToken(
-                            token,
-                            LocalDateTime.now(),
-                            LocalDateTime.now().plusMinutes(15),
-                            user
-                    );
+        ConfirmationToken confirmationToken = ConfirmationTokenPolicy.createToken(user);
 
         confirmationTokenService.saveConfirmationToken(confirmationToken);
 
         // TODO: send Email
 
-        return token;
+        return "token create success";
     }
 
     public int enableUser(String email) {

@@ -28,15 +28,8 @@ public class RegistrationService {
         if (!isEmailValid) {
             throw new IllegalArgumentException("email not valid");
         }
-        String token =  userService.signUpUser(
-                new User(
-                        request.getFirstName(),
-                        request.getLastName(),
-                        request.getEmail(),
-                        request.getPassword(),
-                        UserRole.USER
-                )
-        );
+
+        String token =  userService.signUpUser(request.toUser());
 
         // 이메일 발송
         String link = "http://localhost:8080/api/v1/registration/confirm?token=" + token;
