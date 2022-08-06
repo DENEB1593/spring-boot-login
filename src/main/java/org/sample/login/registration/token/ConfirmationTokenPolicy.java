@@ -9,7 +9,7 @@ public class ConfirmationTokenPolicy {
 
     public static ConfirmationToken createToken(User user) {
 
-        final String token = UUID.randomUUID().toString();
+        String token = UUID.randomUUID().toString();
 
         return ConfirmationToken.builder()
                 .token(token)

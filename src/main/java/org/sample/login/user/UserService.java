@@ -50,9 +50,7 @@ public class UserService implements UserDetailsService {
 
         confirmationTokenService.saveConfirmationToken(confirmationToken);
 
-        // TODO: send Email
-
-        return "token create success";
+        return confirmationToken.getToken();
     }
 
     public int enableUser(String email) {
