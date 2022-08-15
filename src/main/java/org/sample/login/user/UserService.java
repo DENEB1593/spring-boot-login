@@ -3,17 +3,12 @@ package org.sample.login.user;
 import lombok.RequiredArgsConstructor;
 import org.sample.login.registration.token.ConfirmationToken;
 import org.sample.login.registration.token.ConfirmationTokenPolicy;
-import org.sample.login.registration.token.ConfirmationTokenRepository;
 import org.sample.login.registration.token.ConfirmationTokenService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDateTime;
-import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -42,7 +37,7 @@ public class UserService implements UserDetailsService {
             throw new IllegalStateException("email already taken");
         }
 
-        String encodedPassword = bCryptPasswordEncoder .encode(user.getPassword());
+        String encodedPassword = bCryptPasswordEncoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
         userRepository.save(user);
 
