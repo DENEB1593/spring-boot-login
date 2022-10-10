@@ -1,4 +1,4 @@
-package org.sample.login.email;
+package org.sample.login.domain.email;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

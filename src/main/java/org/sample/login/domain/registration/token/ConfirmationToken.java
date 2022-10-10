@@ -1,10 +1,10 @@
-package org.sample.login.registration.token;
+package org.sample.login.domain.registration.token;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.sample.login.user.User;
+import org.sample.login.domain.user.User;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

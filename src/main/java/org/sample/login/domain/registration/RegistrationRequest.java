@@ -1,11 +1,11 @@
-package org.sample.login.registration;
+package org.sample.login.domain.registration;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
-import org.sample.login.user.User;
-import org.sample.login.user.UserRole;
+import org.sample.login.domain.user.User;
+import org.sample.login.domain.user.UserRole;
 
 @Getter
 @AllArgsConstructor

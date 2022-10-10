@@ -1,4 +1,4 @@
-package org.sample.login.user;
+package org.sample.login.domain.user;
 
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;

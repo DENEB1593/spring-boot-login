@@ -1,6 +1,6 @@
-package org.sample.login.registration.token;
+package org.sample.login.domain.registration.token;
 
-import org.sample.login.user.User;
+import org.sample.login.domain.user.User;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

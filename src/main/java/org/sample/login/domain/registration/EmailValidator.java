@@ -1,4 +1,4 @@
-package org.sample.login.registration;
+package org.sample.login.domain.registration;
 
 import org.springframework.stereotype.Service;
 

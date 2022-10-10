@@ -1,9 +1,10 @@
-package org.sample.login.user;
+package org.sample.login.domain.user;
 
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.sample.login.registration.token.ConfirmationToken;
-import org.sample.login.registration.token.ConfirmationTokenPolicy;
-import org.sample.login.registration.token.ConfirmationTokenService;
+import org.sample.login.domain.registration.token.ConfirmationToken;
+import org.sample.login.domain.registration.token.ConfirmationTokenPolicy;
+import org.sample.login.domain.registration.token.ConfirmationTokenService;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -11,7 +12,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class UserService implements UserDetailsService {
 
     private final static String USER_NOT_FOUND_MSG = "해당 이메일(%s)에 사용자가 조회되지 않습니다";

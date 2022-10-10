@@ -1,10 +1,10 @@
-package org.sample.login.registration;
+package org.sample.login.domain.registration;
 
 import lombok.AllArgsConstructor;
-import org.sample.login.email.EmailService;
-import org.sample.login.registration.token.ConfirmationToken;
-import org.sample.login.registration.token.ConfirmationTokenService;
-import org.sample.login.user.UserService;
+import org.sample.login.domain.email.EmailService;
+import org.sample.login.domain.registration.token.ConfirmationToken;
+import org.sample.login.domain.registration.token.ConfirmationTokenService;
+import org.sample.login.domain.user.UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

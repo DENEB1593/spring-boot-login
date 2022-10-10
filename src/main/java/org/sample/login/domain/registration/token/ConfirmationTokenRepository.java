@@ -1,4 +1,4 @@
-package org.sample.login.registration.token;
+package org.sample.login.domain.registration.token;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
